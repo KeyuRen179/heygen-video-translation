@@ -51,6 +51,18 @@ Run the integration test to demonstrate server and client interaction:
 python integration_test.py
 ```
 
+## How Can We Do Better Than a Trivial Approach?
+To go beyond a trivial implementation, the client library incorporates several optimizations and features that demonstrate a customer-first mindset:
+
+- **Exponential Backoff:** Instead of polling the server at fixed intervals, the library uses an exponential backoff strategy to reduce resource usage while maintaining responsiveness.
+- **Configurable Parameters:** Customers can fine-tune parameters such as maximum retries, initial polling interval, and maximum interval to suit their specific use cases.
+- **Error Handling:** The library handles server errors gracefully, providing clear feedback to users about the state of the translation process.
+- **Timeout Management:** Ensures that polling does not run indefinitely by enforcing a maximum retry limit, reducing frustration for users.
+- **Logging:** Comprehensive logs give users visibility into the polling process, making it easier to diagnose issues.
+- **Ease of Integration:** The library is designed with simplicity in mind, allowing third-party developers to integrate it quickly into their systems with minimal setup.
+
+These features prioritize user experience by balancing efficiency, transparency, and flexibility, making the library suitable for real-world applications.
+
 ## Configuration
 ### Server Configuration
 You can modify the server's behavior by editing `server.py`:
@@ -107,8 +119,5 @@ Final Translation Status: completed
 
 ## License
 This project is licensed under the MIT License. See the LICENSE file for details.
-
-## Contributions
-Contributions are welcome! Please open an issue or submit a pull request if you'd like to enhance the project.
 
 
