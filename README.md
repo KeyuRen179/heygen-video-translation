@@ -13,11 +13,11 @@ This is a simulation of the Heygen Video Translation backend and client library 
 ### 1. Install dependencies
 ``bash
 pip install -r requirements.txt
-2. Start the server
+### 2. Start the server
 bash
 Copy the code
 python server.py
-3. Use the client library
+### 3. Use the client library
 python
 Copy the code
 from translation_client import TranslationClient
@@ -25,7 +25,7 @@ from translation_client import TranslationClient
 client = TranslationClient(“http://localhost:5000”)
 status = client.get_status()
 print(“Translation Status:”, status)
-4. Run the integration test
+### 4. Run the integration test
 bash
 Copy the code
 python integration_test.py
@@ -45,5 +45,3 @@ bash
 Copy Code
 git tag v1.0
 git push origin v1.0
-
-Translated with DeepL.com (free version)
